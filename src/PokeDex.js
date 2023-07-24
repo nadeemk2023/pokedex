@@ -43,8 +43,12 @@ const PokeDex = () => {
                   : state.pokemonInfo.sprites.front_default
               }
               alt={state.pokemonInfo.name}
+              className="db"
             />
-            <button onClick={toggleShinyButton}>
+            <button
+              onClick={toggleShinyButton}
+              className={`tc ${state.isShiny ? `hover-red` : `hover-blue`}`}
+            >
               {state.isShiny
                 ? `Show me ${state.pokemonInfo.name}`
                 : `Show me shiny ${state.pokemonInfo.name}`}
